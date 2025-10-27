@@ -16,6 +16,9 @@
         <!--Que no se me olvide ver como hacer para ocultar y mostrar la contraseña, se hace con javascript, un boton y asi xdxd-->
         <label for="">Foto: </label>
         <input type="file" name="foto"><br><br>
+        
+        <label for="">correo </label>
+        <input class="inp" type="text" name="correo" id=""><br><br>
 
         <input  class="boton" type="submit" name="guardar" id="">
 
