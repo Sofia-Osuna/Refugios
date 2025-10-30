@@ -27,6 +27,10 @@
           
             return $respuesta;
         }
+
+        function editar(){
+            
+        }
         
         
        
