@@ -19,7 +19,7 @@
         
         <label for="">correo </label>
         <input class="inp" type="text" name="correo" id=""><br><br>
-
+        
         <input  class="boton" type="submit" name="guardar" id="">
 
     </form>

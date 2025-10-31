@@ -4,7 +4,7 @@
 
     $nombre = $_POST["nombre"];
     $descripcion = $_POST["descripcion"];
-    $foto = $_POST["foto"];
+    //$foto = $_POST["foto"];
     //lo de foto esta pendiente
     $estado= $_POST["estado"];
     $municipio = $_POST["municipio"];
