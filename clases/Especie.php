@@ -40,7 +40,7 @@
     return $especies;
 }
         //esto es para tener la id de la especie
-        function obtenerPorId($id_especie){
+        function Id($id_especie){
          $consulta = "SELECT * FROM especie WHERE id_especie = {$id_especie}";
          $respuesta = $this->conexion->query($consulta);
         $especie = $respuesta->fetch_assoc();

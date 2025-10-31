@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 
 include('clases/Especie.php');
 $clase = new Especie();
-$especies = $clase->mostrar();
+$resultado = $clase->mostrar();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,12 +17,7 @@ $especies = $clase->mostrar();
     <h1>Gestión de Especies</h1>
     
     <?php if(isset($_GET['msg'])): ?>
-        <div class="mensaje success">
-            <?php 
-                if($_GET['msg'] == 'actualizado') echo 'Especie actualizada correctamente';
-                if($_GET['msg'] == 'eliminado') echo 'Especie eliminada correctamente';
-                if($_GET['msg'] == 'creado') echo 'Especie creada correctamente';
-            ?>
+    
         </div>
     <?php endif; ?>
   <a href="formulario_especie.php">+ Nueva Especie</a>
@@ -34,10 +29,9 @@ $especies = $clase->mostrar();
             </tr>
         </thead>
         <tbody>
-            <?php if(count($especies) > 0): ?>
-                <?php foreach($especies as $especie): ?>
+                <?php foreach($resultado as $especie){ ?>
                     <tr>
-                        <td><?= htmlspecialchars($especie['nombre']) ?></td>
+                        <td><?=$especie['nombre'] ?></td>
                         <td>
                      <a href="Editar_especie.php?id=<?= $especie['id_especie'] ?>">Editar</a>
                             
@@ -45,12 +39,7 @@ $especies = $clase->mostrar();
                                onclick="return confirm('¿Estás seguro de eliminar esta especie?')">Eliminar</a>
                         </td>
                     </tr>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <tr>
-                    <td colspan="3">No hay especies registradas</td>
-                </tr>
-            <?php endif; ?>
+                <?php } ?>
         </tbody>
     </table>
 </body>

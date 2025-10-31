@@ -38,8 +38,6 @@
         <input class="inp" type="text" name="cp" id=""><br><br>
 
         <input  class="boton" type="submit" name="guardar" id="">
-
-
     </form>
 </body>
 </html>

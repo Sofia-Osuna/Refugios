@@ -11,13 +11,12 @@ if (!$id_especie) {
 }
 include('clases/Especie.php');
 $clase = new Especie();
-$especie = $clase->obtenerPorId($id_especie);
+$resultado= $clase->Id($id_especie);
 
-if (!$especie) {
+if (!$resultado ){
     echo "Especie no encontrada";
     exit;
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -29,10 +28,10 @@ if (!$especie) {
     <h1>Editar Especie</h1>
     
     <form method="POST" action="controladores/actualizar_especie.php">
-        <input type="hidden" name="id_especie" value="<?= $especie['id_especie'] ?>">
+        <input type="hidden" name="id_especie" value="<?= $resultado['id_especie'] ?>">
         
         <label>Nombre de la especie:</label>
-        <input type="text" name="nombre" value="<?= htmlspecialchars($especie['nombre']) ?>" required>
+        <input type="text" name="nombre" value="<?= $resultado['nombre'] ?>" required>
         <br><br>
         
         <button type="submit">Actualizar</button>
