@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>formulario especie</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center; 
+        }
+
+        .titulo {
+            background-color: rgb(3, 159, 125);
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        form {
+            display: inline-block; 
+            text-align: left;   
+            max-width: 400px;
+            width: 90%;
+            margin: 40px auto; 
+            padding: 20px;    
+            box-sizing: border-box;
+        }
+
+        .campo {
+            margin-bottom: 30px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px; 
+            font-size: 16px;
+            font-weight: bold; 
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .boton {
+    background-color: orange;
+    color: rgb(255, 253, 253);
+    border: none;
+    padding: 12px 20px; 
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    display: block;
+    margin: 400px auto 0 auto; 
+    width: 150px;
+}
+    </style>
+</head>
+<body>
+
+<h1 class="titulo">Formulario para crear especies</h1>
+
+<form>
+    <div class="campo">
+        <label for="Nom_especie">Nombre de la especie:</label>
+        <input type="text" id="Nom_especie" name="Nom_especie">
+    </div>
+
+    <input class="boton" type="submit" value="Registrar especie">
+</form>  
+
+</body>
+</html>
