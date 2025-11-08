@@ -59,7 +59,6 @@
 
             return $respuesta;
         }
-
         function eliminar($id_usuario){
         $consulta = "UPDATE  usuario SET estatus = 0 WHERE id_usuario = {$id_usuario}";
         $respuesta = $this->conexion->query($consulta);

@@ -26,15 +26,17 @@ $refugio = $clase->Id($id);
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="margenGenerico" href="editar_refugio.php?id=<?= $refugio['id_refugio'] ?>">Editar Refugio</a></li>
-        <li class="nav-item">    <a href="controladores/eliminar_refugio.php?id=<?= $refugio['id_refugio'] ?>"> Eliminar Refugio</a></li>
-        <li class="nav-item"><a class="nav-link" href="Lista_refugio.php">Mascotas</a></li>
+        <li class="nav-item"><a href="controladores/eliminar_refugio.php?id=<?= $refugio['id_refugio'] ?>"> Eliminar Refugio</a></li>
+        
+        <!-- apenas asi me funciono sin el li -->
+<a href="Lista_mascota.php?id_refugio=<?= $refugio['id_refugio'] ?>">Lista_mascota</a>
+
         <li class="nav-item"><a class="nav-link" href="#">Historias Felices</a></li>
+        
       </ul>
     </div>
   </div>
-</nav>
-
-     
+</nav> 
 
 </body>
 </html>
