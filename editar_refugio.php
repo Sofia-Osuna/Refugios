@@ -14,7 +14,7 @@ $municipios = $clase->conexion->query("SELECT id_municipio, nombre FROM municipi
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Refugio</title>
-
+    
 <body>
     <form action="controladores/actualizar_refugio.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id_refugio" value="<?= $refugio['id_refugio'] ?>">
@@ -30,7 +30,6 @@ $municipios = $clase->conexion->query("SELECT id_municipio, nombre FROM municipi
 
 
         <h3>Dirección</h3>
-
 <label for="">Estado: </label>
 <select class="inp" name="estado">
 <?php while($est = $estados->fetch_assoc()){ ?>
@@ -39,7 +38,6 @@ $municipios = $clase->conexion->query("SELECT id_municipio, nombre FROM municipi
     </option>
 <?php } ?>
 </select><br><br>
-
 <label for="">Municipio: </label>
 <select class="inp" name="municipio">
 <?php while($mun = $municipios->fetch_assoc()){ ?>

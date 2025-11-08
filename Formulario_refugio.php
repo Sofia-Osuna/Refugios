@@ -117,9 +117,7 @@
 		<option value="30">Morelos</option>
 		<option value="31">Nuevo leon</option>
 		<option value="32">Ciudad de Mexico</option>
-
 		
-
 	</select>
 	<br><br>
 
