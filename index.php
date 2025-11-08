@@ -6,34 +6,18 @@
     <title>Menu principal</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        h1{
-            text-align: center;
-        }
-
-        
-    </style>
-
+    <link rel="stylesheet" href="css/estilo.css">
+   
    
 
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Menu</a>
+<?php
+    include('menu.php');
+?>
 
- 
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar refugios" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
-<br>
+<div></div>
 <h1>¡RefuPets!</h1>
 <br><br><br><br>
 <figure>
