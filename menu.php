@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menu</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+
     <link rel="stylesheet" href="css/estilo.css">
     <!-- Poner otra imagen, no se con un corazon o algo asi -->
     <link rel="icon" type="image/png" href="img_sistema/logo_color.png"> 
@@ -15,6 +16,7 @@
     
     <a class="navbar-brand" href="#">
         <img  src="img_sistema/logo.png" alt="logo" class="d-inline-block align-text-top me-2" style="height: 60px" >
+
         RefuPETS
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
