@@ -23,9 +23,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#">Iniciar sesion</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Adoptar</a></li>
+        <!-- Estas opciones de aqui solo apareceran si el usuario esta registrado -->
+        <li class="nav-item"><a class="nav-link" href="#">Lista especies</a></li>
         <li class="nav-item"><a class="nav-link" href="Lista_refugio.php">Refugios</a></li>
-        <li class="nav-item"><a class="nav-link" href="#"></a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Lista Usuarios</a></li>
       </ul>
     </div>
   </div>
