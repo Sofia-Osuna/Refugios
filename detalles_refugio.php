@@ -1,5 +1,6 @@
 <?php
 include('clases/Refugio.php');
+include('menu.php');
 
 $clase = new Refugio();
 $id = $_GET['id'];
@@ -15,11 +16,25 @@ $refugio = $clase->Id($id);
 </head>
 <body>
 
-    <h3>En proceso</h3>
-        <h3>Acciones</h3>
+    <nav class=" navbar navbar-expand-lg navbar-light  navbar-custom2">
+  <div class="container-fluid">
+    
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="margenGenerico" href="editar_refugio.php?id=<?= $refugio['id_refugio'] ?>">Editar Refugio</a></li>
+        <li class="nav-item">    <a href="controladores/eliminar_refugio.php?id=<?= $refugio['id_refugio'] ?>"> Eliminar Refugio</a></li>
+        <li class="nav-item"><a class="nav-link" href="Lista_refugio.php">Mascotas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Historias Felices</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <a href="editar_refugio.php?id=<?= $refugio['id_refugio'] ?>">Editar Refugio</a> |
-    <a href="controladores/eliminar_refugio.php?id=<?= $refugio['id_refugio'] ?>"> Eliminar Refugio</a>
+     
 
 </body>
 </html>

@@ -64,61 +64,18 @@
         
     </style>
 
+    <link rel="stylesheet" href="css/estilo.css">
+   
    
 
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">Menu</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-        
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.php">Inicio</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-            Refugios
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="">Lista de Refugios</a></li>
-            <li><a class="dropdown-item" href="">Añadir un nuevo Refugio</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            Perfil
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="">Mi Informacion</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="">Cerrar Sesión</a>
-        </li>
-      </ul>
-    </div>
+<?php
+    include('menu.php');
+?>
 
-
-
-
- 
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar refugios" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
-<br>
+<div></div>
 <h1>¡RefuPets!</h1>
 <br><br><br><br>
 <figure>
