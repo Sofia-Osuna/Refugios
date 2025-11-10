@@ -1,6 +1,6 @@
 <?php
+include('menu.php');
 include('clases/Refugio.php');
-
 $clase = new Refugio();
 $id = $_GET['id'];
 $refugio = $clase-> Id($id);
@@ -16,6 +16,7 @@ $municipios = $clase->conexion->query("SELECT id_municipio, nombre FROM municipi
     <title>Editar Refugio</title>
     
 <body>
+    
     <form action="controladores/actualizar_refugio.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id_refugio" value="<?= $refugio['id_refugio'] ?>">
         
@@ -64,3 +65,6 @@ $municipios = $clase->conexion->query("SELECT id_municipio, nombre FROM municipi
     </form>
 </body>
 </html>
+<?php 
+include('Pie_pagina.php');
+ ?>

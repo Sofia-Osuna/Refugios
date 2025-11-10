@@ -3,3 +3,21 @@
  y aqui se van a llamar esas preguntas para que las responda el usuario
  
  por el momento no se preocupen por esto, solo agreguen el menu, el pie de pagina y los margenes y así -->
+ <?php 
+ include('menu.php');
+
+  ?>
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title></title>
+ </head>
+ <body>
+ <!--este esta bien ya -->
+ </body>
+ </html>
+ <?php 
+  include('Pie_pagina.php');
+  ?>

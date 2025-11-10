@@ -1,6 +1,6 @@
 <?php
+include('menu.php'); 
 require_once('clases/Mascota.php');
-
 $id = $_GET['id'];
 $id_refugio = $_GET['id_refugio'];
 
@@ -16,6 +16,8 @@ $especies = $mascota_obj->obtenerEspecies();
     <title>Editar Mascota</title>
 </head>
 <body>
+
+    
     <h1>Editar Mascota</h1>
     
   <form action="controladores/actualizar_mascota.php" method="POST" enctype="multipart/form-data">
@@ -46,3 +48,6 @@ $especies = $mascota_obj->obtenerEspecies();
 </form>
 </body>
 </html>
+<?php 
+include('Pie_pagina.php');
+ ?>
