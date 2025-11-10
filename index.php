@@ -183,3 +183,6 @@
 
 </body>
 </html>
+<?php
+    include('Pie_pagina.php');
+?>
