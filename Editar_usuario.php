@@ -1,4 +1,5 @@
 <?php
+include('menu.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -18,6 +19,10 @@ $usuario = $clase->obtenerPorId($id_usuario);
     <title>Editar usuario</title>
 </head>
 <body>
+    <?php 
+    
+
+     ?>
     <h3>Editar usuario</h3><br>
     <form action="controladores/actualizar_usuario.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id_usuario" value="<?= $usuario['id_usuario'] ?>">
@@ -37,3 +42,6 @@ $usuario = $clase->obtenerPorId($id_usuario);
         <input  class="boton" type="submit" name="guardar" id="">
 </body>
 </html>
+<?php 
+include('Pie_pagina.php');
+ ?>

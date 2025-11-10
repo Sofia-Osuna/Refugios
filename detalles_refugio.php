@@ -1,11 +1,13 @@
 <?php
-include('clases/Refugio.php');
 include('menu.php');
+include('clases/Refugio.php');
+
 
 $clase = new Refugio();
 $id = $_GET['id'];
 $refugio = $clase->Id($id);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +17,7 @@ $refugio = $clase->Id($id);
     <title>Document</title>
 </head>
 <body>
+
 
     <nav class=" navbar navbar-expand-lg navbar-light  navbar-custom2">
   <div class="container-fluid">
@@ -40,3 +43,8 @@ $refugio = $clase->Id($id);
 
 </body>
 </html>
+<?php 
+include('Pie_pagina.php');
+ ?>
+
+ 

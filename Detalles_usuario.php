@@ -1,9 +1,10 @@
 <?php
+include('menu.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 $id_usuario = $_GET['id'] ?? null;
-include('menu.php');
+
 
 
 include('clases/Usuario.php');
@@ -25,3 +26,7 @@ $usuario = $clase->obtenerPorId($id_usuario);
     <a href="controladores/eliminar_especie.php?id=<?= $usuario['id_usuario'] ?>" onclick="return confirm('¿Estás seguro de eliminar esta especie?')">Eliminar</a>
 </body>
 </html>
+
+<?php 
+include('Pie_pagina')
+ ?>

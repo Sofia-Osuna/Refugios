@@ -1,3 +1,7 @@
+<?php 
+    include('menu.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+    
      <h3>Formulario especie</h3><br>
     <form action="controladores/Insertar_especie.php" method="POST" enctype="multipart/form-data">
         <label for="">nombre de la especie </label>
@@ -16,3 +21,6 @@
     </form>
 </body>
 </html>
+<?php 
+include('Pie_pagina.php');
+ ?>

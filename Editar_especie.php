@@ -1,5 +1,6 @@
 
 <?php
+include('menu.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -25,6 +26,7 @@ if (!$resultado ){
     <title>Editar Especie</title>
 </head>
 <body>
+
     <h1>Editar Especie</h1>
     
     <form method="POST" action="controladores/actualizar_especie.php">
@@ -39,3 +41,6 @@ if (!$resultado ){
     </form>
 </body>
 </html>
+<?php 
+include('Pie_pagina.php');
+ ?>
