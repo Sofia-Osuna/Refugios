@@ -1,0 +1,2 @@
+<!-- Aqui es practicamente lo mismo que el detalle respuesta usuario, pero se accede a travez de la lista de respuestas de 
+ de un refugio, el cual puede ser de muchos usuario, y se accede por medio del menu del refugio, -->
