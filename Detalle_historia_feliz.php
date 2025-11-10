@@ -1,0 +1,1 @@
+<!-- Aqui se ve todaaaaa la información de una historia feliz, incluye el boton que lleva a la pagina de editar -->

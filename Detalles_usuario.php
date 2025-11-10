@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 $id_usuario = $_GET['id'] ?? null;
+include('menu.php');
 
 
 include('clases/Usuario.php');

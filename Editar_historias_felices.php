@@ -1,0 +1,1 @@
+<!-- formulario identico a fromulario historia felices, pero de una historia en especifico y pues se añade el boton de eliminar -->

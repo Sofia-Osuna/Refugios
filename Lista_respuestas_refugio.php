@@ -1,0 +1,1 @@
+<!-- casi lo mismo que la lista de respuesta usuario, pero aqui son de muchos usuarios y se accede a travez del menu de refugio -->

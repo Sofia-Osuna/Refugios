@@ -1,0 +1,1 @@
+<!-- Aqui se pueden ver TODA la informacion de una mascota, incluido el boton de adoptar, o editar -->
