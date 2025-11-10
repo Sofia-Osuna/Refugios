@@ -28,8 +28,9 @@ $especies = $mascota_obj->obtenerEspecies();
         <input type="text" name="nombre" required><br><br>
 
         <label for="">Descripción: </label>
-        <textarea name="descripcion" required></textarea><br><br>
-
+          <textarea name="descripcion" required></textarea><br><br>
+      <label for="">Foto: </label>
+        <input type="file" name="foto"><br><br>
         <label for="">Especie: </label>
         <select name="fk_especie" required>
             <option value="">Selecciona una especie</option>

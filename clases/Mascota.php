@@ -9,13 +9,13 @@ class Mascota{
         $this->conexion = new Conexion();
     }
     
-    function guardar($nombre, $descripcion, $fk_especie, $fk_refugio){
-        $consulta = "INSERT INTO mascotas (id_mascotas, nombre, descripcion, fk_especie, fk_refugio, estatus) 
-                     VALUES (null, '$nombre', '$descripcion', '$fk_especie', '$fk_refugio', 1)";
-        
-        $respuesta = $this->conexion->query($consulta);
-        return $respuesta;
-    }
+  function guardar($nombre, $descripcion, $foto, $fk_especie, $fk_refugio){
+    $consulta = "INSERT INTO mascotas (id_mascotas, nombre, descripcion, foto, fk_especie, fk_refugio, estatus) 
+                 VALUES (null, '$nombre', '$descripcion', '$foto', '$fk_especie', '$fk_refugio', 1)";
+    
+    $respuesta = $this->conexion->query($consulta);
+    return $respuesta;
+}
   function mostrarPorRefugio($id_refugio){
     if($id_refugio == null || $id_refugio == ''){
         return [];
@@ -44,6 +44,7 @@ class Mascota{
     }
     return $especies;
 }
+
 function obtenerMascota($id_mascota){
     $consulta = "SELECT * FROM mascotas WHERE id_mascotas = $id_mascota";
     $respuesta = $this->conexion->query($consulta);
