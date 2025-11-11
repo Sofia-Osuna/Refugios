@@ -38,6 +38,11 @@ $especies = $mascota_obj->obtenerEspecies();
                 </option>
             <?php } ?>
         </select><br><br>
+
+        <select>
+            <option>Activo</option>
+            <option>Inactivo</option>
+        </select>
         
         <button type="submit">Actualizar</button>
         <a href="Lista_mascota.php?id_refugio=<?= $id_refugio ?>">Cancelar</a>
