@@ -7,10 +7,25 @@
     $descripcion = $_POST["descripcion"];
     $fk_especie = $_POST["fk_especie"];
     $id_refugio = $_POST["id_refugio"];
+    
+    // Manejar la foto
+    $foto = $_FILES["foto"]["name"];
+    $tmp = $_FILES["foto"]["tmp_name"];
+    
+    if($foto != ""){
+        $ruta = "../imagenes_animales/" . $foto;
+        move_uploaded_file($tmp, $ruta);
+    } else {
+        // Si no sube foto nueva, mantener la anterior
+        include ('../clases/Mascota.php');
+        $clase_temp = new Mascota();
+        $mascota_actual = $clase_temp->obtenerMascota($id_mascota);
+        $foto = $mascota_actual['foto'];
+    }
 
     include ('../clases/Mascota.php');
     $clase = new Mascota();
-    $resultado = $clase->actualizar($id_mascota, $nombre, $descripcion, $fk_especie);
+    $resultado = $clase->actualizar($id_mascota, $nombre, $descripcion, $foto, $fk_especie);
 
     if($resultado){
         header('location: ../Lista_mascota.php?id_refugio=' . $id_refugio);
