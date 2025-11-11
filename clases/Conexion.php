@@ -4,5 +4,4 @@
             parent :: __construct('localhost', 'root', '', 'refugios_mascotas');
         }
     }
-
 ?>
