@@ -18,7 +18,7 @@
     $resultado = $clase ->guardar($nombre,  $descripcion, $estado, $municipio, $nombre_calle,  $numero_exterior, $numero_interior, $cp );
 
     if($resultado){
-        header('location: ../index.php');
+        header('location: ../Lista_refugio.php');
        
     }else{
         echo"Error";

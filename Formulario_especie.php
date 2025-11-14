@@ -22,5 +22,5 @@
 </body>
 </html>
 <?php 
-include('Pie_pagina.php');
- ?>
+    include('Pie_pagina.php');
+?>
