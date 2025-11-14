@@ -37,12 +37,32 @@
     
     <!-- Menú que se colapsa -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Iniciar sesion</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Adoptar</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Refugios</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-      </ul>
+      <div class="row">
+            
+        <div class="col-md-4">
+          <ul class="navbar-nav">
+            <h5 class = "navbar-">Usuario</h5>
+            <li class="nav-item"><a class="nav-link" href="inicio_sesion.">Iniciar sesion</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Ver perfil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Cerrar sesión</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Lista de usuario</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <ul class="navbar-nav">
+
+            <li class="nav-item"><a class="nav-link" href="#">Lista de Refugio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Crear un nuevo refugio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ver mi Refugio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Lista de refugios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ver especies</a></li>
+          </ul>
+          
+
+
+        </div>
+      
     </div>
     
   </div>
