@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 27-10-2025 a las 17:42:08
+-- Tiempo de generación: 16-11-2025 a las 07:01:14
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -61,6 +61,17 @@ CREATE TABLE `correo_usuario` (
   `estatus` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
+--
+-- Volcado de datos para la tabla `correo_usuario`
+--
+
+INSERT INTO `correo_usuario` (`id_correo_usuario`, `correo`, `fk_usuario`, `estatus`) VALUES
+(1, 'test3@gmail.com', 18, '0'),
+(2, 'nochecuasaralbedo@gmail.com', 19, '1'),
+(3, 'test3ACTUALIZADO@gmail.com', 20, '1'),
+(4, 'test3ACTUALIZAAA@gmail.com', 18, '1'),
+(5, 'osofia217@gmail.com', 21, '1');
+
 -- --------------------------------------------------------
 
 --
@@ -89,8 +100,18 @@ CREATE TABLE `direccion` (
   `numero_exterior` varchar(7) DEFAULT NULL,
   `numero_interior` varchar(7) DEFAULT NULL,
   `cp` char(5) NOT NULL,
-  `fk_municipio` int(11) NOT NULL
+  `fk_municipio` int(11) NOT NULL,
+  `colonia` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `direccion`
+--
+
+INSERT INTO `direccion` (`id_direccion`, `nombre_calle`, `numero_exterior`, `numero_interior`, `cp`, `fk_municipio`, `colonia`) VALUES
+(1, 'xd', '001', '01', '82808', 1, ''),
+(2, 'xd', '001', '01', '82808', 2, ''),
+(3, 'xd', '001', '01', '82808', 3, '');
 
 -- --------------------------------------------------------
 
@@ -102,6 +123,14 @@ CREATE TABLE `especie` (
   `id_especie` int(11) NOT NULL,
   `nombre` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `especie`
+--
+
+INSERT INTO `especie` (`id_especie`, `nombre`) VALUES
+(1, 'Perro'),
+(3, 'Gato');
 
 -- --------------------------------------------------------
 
@@ -115,6 +144,15 @@ CREATE TABLE `estado` (
   `fk_pais` int(11) NOT NULL,
   `estatus` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `estado`
+--
+
+INSERT INTO `estado` (`id_estado`, `nombre`, `fk_pais`, `estatus`) VALUES
+(1, 'Sinaloa', 1, '1'),
+(2, 'Sinaloa', 1, '1'),
+(3, 'Sinaloa', 1, '1');
 
 -- --------------------------------------------------------
 
@@ -157,7 +195,8 @@ CREATE TABLE `mascotas` (
   `descripcion` text NOT NULL,
   `fk_especie` int(11) NOT NULL,
   `fk_refugio` int(11) NOT NULL,
-  `estatus` enum('disponible','adoptado','indisponible') NOT NULL
+  `estatus` enum('disponible','adoptado','indisponible') NOT NULL,
+  `foto` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -186,6 +225,15 @@ CREATE TABLE `municipio` (
   `estatus` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `municipio`
+--
+
+INSERT INTO `municipio` (`id_municipio`, `nombre`, `fk_estado`, `estatus`) VALUES
+(1, 'Rosario', 1, '1'),
+(2, 'Rosario', 2, '1'),
+(3, 'Rosario', 3, '1');
+
 -- --------------------------------------------------------
 
 --
@@ -194,8 +242,15 @@ CREATE TABLE `municipio` (
 
 CREATE TABLE `pais` (
   `id_pais` int(11) NOT NULL,
-  `nombre` char(1) DEFAULT NULL
+  `nombre` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `pais`
+--
+
+INSERT INTO `pais` (`id_pais`, `nombre`) VALUES
+(1, 'México');
 
 -- --------------------------------------------------------
 
@@ -211,6 +266,15 @@ CREATE TABLE `refugio` (
   `estatus` char(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `refugio`
+--
+
+INSERT INTO `refugio` (`id_refugio`, `nombre`, `descripcion`, `foto`, `estatus`) VALUES
+(1, 'la lomita', 'refugio de test', 'pendiente', '1'),
+(2, 'test', 'test', 'pendiente', '1'),
+(3, 'sdcsd', 'cdsdc', 'pendiente', '1');
+
 -- --------------------------------------------------------
 
 --
@@ -223,6 +287,15 @@ CREATE TABLE `refugio_direcciones` (
   `fk_direccion` int(11) NOT NULL,
   `estatus` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `refugio_direcciones`
+--
+
+INSERT INTO `refugio_direcciones` (`id_refugio_direcciones`, `fk_refugio`, `fk_direccion`, `estatus`) VALUES
+(1, 1, 1, '1'),
+(2, 2, 2, '1'),
+(3, 3, 3, '1');
 
 -- --------------------------------------------------------
 
@@ -302,7 +375,11 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `password`, `foto`, `fk_rol`, `estatus`) VALUES
 (1, 'usuario1test', '123', 'foto', 2, '1'),
-(2, 'usuario2test', '1234', 'foto', 2, '1');
+(2, 'usuario2test', '1234', 'foto', 2, '1'),
+(18, 'test3uwu', '3test', 'foto', 2, '1'),
+(19, 'NocheisHuman', '1234', 'foto', 2, '1'),
+(20, 'test3uwu', '3test', 'foto', 2, '0'),
+(21, 'test', 'tkvgygfg', 'foto', 2, '1');
 
 -- --------------------------------------------------------
 
@@ -509,7 +586,7 @@ ALTER TABLE `correo_refugio`
 -- AUTO_INCREMENT de la tabla `correo_usuario`
 --
 ALTER TABLE `correo_usuario`
-  MODIFY `id_correo_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_correo_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `datos_personales`
@@ -521,19 +598,19 @@ ALTER TABLE `datos_personales`
 -- AUTO_INCREMENT de la tabla `direccion`
 --
 ALTER TABLE `direccion`
-  MODIFY `id_direccion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_direccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `especie`
 --
 ALTER TABLE `especie`
-  MODIFY `id_especie` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_especie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `estado`
 --
 ALTER TABLE `estado`
-  MODIFY `id_estado` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_estado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `formulario_adopcion`
@@ -563,25 +640,25 @@ ALTER TABLE `mascotas_adopcion`
 -- AUTO_INCREMENT de la tabla `municipio`
 --
 ALTER TABLE `municipio`
-  MODIFY `id_municipio` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_municipio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `pais`
 --
 ALTER TABLE `pais`
-  MODIFY `id_pais` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `refugio`
 --
 ALTER TABLE `refugio`
-  MODIFY `id_refugio` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_refugio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `refugio_direcciones`
 --
 ALTER TABLE `refugio_direcciones`
-  MODIFY `id_refugio_direcciones` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_refugio_direcciones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `respuestas_formulario`
@@ -611,7 +688,7 @@ ALTER TABLE `telefono_usuario`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios_direcciones`
